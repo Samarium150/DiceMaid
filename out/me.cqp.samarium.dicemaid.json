@@ -1,0 +1,92 @@
+{
+  "ret": 1,
+  "apiver": 9,
+  "name": "dicemaid",
+  "version": "beta-1.0.0",
+  "version_id": 1,
+  "author": "Samarium",
+  "path": "lib",
+  "class": "me.cqp.samarium.DiceMaid",
+  "description": "这是个骰娘插件的beta版",
+  "event": [
+    {
+      "id": 1,
+      "type": 21,
+      "name": "私聊消息处理",
+      "function": "privateMsg",
+      "priority": 30000
+    },
+    {
+      "id": 2,
+      "type": 2,
+      "name": "群消息处理",
+      "function": "groupMsg",
+      "priority": 30000
+    },
+    {
+      "id": 3,
+      "type": 4,
+      "name": "讨论组消息处理",
+      "function": "discussMsg",
+      "priority": 30000
+    },
+    {
+      "id": 8,
+      "type": 301,
+      "name": "好友添加请求处理",
+      "function": "requestAddFriend",
+      "priority": 30000
+    },
+    {
+      "id": 9,
+      "type": 302,
+      "name": "群添加请求处理",
+      "function": "requestAddGroup",
+      "priority": 30000
+    },
+    {
+      "id": 1001,
+      "type": 1001,
+      "name": "酷Q启动事件",
+      "priority": 30000,
+      "function": "startup"
+    },
+    {
+      "id": 1002,
+      "type": 1002,
+      "name": "酷Q关闭事件",
+      "priority": 30000,
+      "function": "exit"
+    },
+    {
+      "id": 1003,
+      "type": 1003,
+      "name": "应用已被启用",
+      "priority": 30000,
+      "function": "enable"
+    },
+    {
+      "id": 1004,
+      "type": 1004,
+      "name": "应用将被停用",
+      "priority": 30000,
+      "function": "disable"
+    }
+  ],
+  "menu": [],
+  "status": [],
+  "auth": [
+    101,
+    103,
+    106,
+    127,
+    128,
+    130,
+    131,
+    140,
+    150,
+    151,
+    160,
+    161
+  ]
+}

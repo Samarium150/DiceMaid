@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jcq-coolq-1.2.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jcq-coolq-1.2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/jcq-coolq-1.2.7.jar!/" />
+    </SOURCES>
+  </library>
+</component>
