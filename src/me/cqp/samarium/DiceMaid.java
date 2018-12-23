@@ -22,7 +22,7 @@ public class DiceMaid extends JcqAppAbstract implements ICQVer, IMsg, IRequest{
         diceMaid.enable();
         
         //diceMaid.privateMsg(11, 0, 90L, "~help", 1);
-        diceMaid.groupMsg(0, 1, 1L, 0L, "", "~rd 测试", 1);
+        diceMaid.groupMsg(0, 1, 1L, 0L, "", "~ra测试", 1);
         diceMaid.exit();
     }
 
@@ -110,7 +110,7 @@ public class DiceMaid extends JcqAppAbstract implements ICQVer, IMsg, IRequest{
             String card = CQ.getGroupMemberInfoV2(fromGroup, fromQQ).getCard();
             String name = CQ.getGroupMemberInfoV2(fromGroup, fromQQ).getNick();
             String who = (card.equals(""))? name : card;
-            maid.command(fromQQ,msg);
+            maid.command(fromQQ, msg);
             String reply = maid.getResponse();
             if (!reply.equals("")) {
                 if ((msg.startsWith("~h")|msg.startsWith("～h"))&!(msg.startsWith("~help")|msg.startsWith("～help"))) {
@@ -120,7 +120,7 @@ public class DiceMaid extends JcqAppAbstract implements ICQVer, IMsg, IRequest{
                 else CQ.sendGroupMsg(fromGroup, who+reply);
             }
         } catch (NullPointerException e) {
-            return MSG_IGNORE;
+            e.printStackTrace();
         }
         return MSG_IGNORE;
     }

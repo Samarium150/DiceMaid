@@ -62,17 +62,17 @@ final class Maid{
 			return;
 		}
 		
-		Pattern pDice = Pattern.compile("^[~|～]r.*");
-		Matcher mD = pDice.matcher(msg);
-		if (mD.matches()) {
-			response = dice.toss(msg);
-			return;
-		}
-		
 		Pattern pCheck = Pattern.compile("^[~|～]ra.*");
 		Matcher mCheck = pCheck.matcher(msg);
 		if (mCheck.matches()) {
 			response = dice.check(msg);
+			return;
+		}
+		
+		Pattern pDice = Pattern.compile("^[~|～]r.*");
+		Matcher mD = pDice.matcher(msg);
+		if (mD.matches()) {
+			response = dice.toss(msg);
 			return;
 		}
 		
