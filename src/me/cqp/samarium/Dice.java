@@ -8,6 +8,10 @@ final class Dice{
 	
 	private static Dice instance;
 	private Pattern space = Pattern.compile("\\s*|\t|\r|\n");
+	
+	private Dice(){
+	
+	}
 
 	static synchronized Dice getInstance(){
 		if (instance==null) instance = new Dice();

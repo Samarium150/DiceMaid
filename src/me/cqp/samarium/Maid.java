@@ -14,6 +14,16 @@ final class Maid{
 	
 	private String response = "";
 	
+	private Maid(){
+	
+	}
+	
+	public static void main(String[] args){
+		Maid maid = Maid.getInstance();
+		maid.command(0L, "~help");
+		System.out.println(maid.getResponse());
+	}
+	
 	static synchronized Maid getInstance() {
 		if (instance==null) instance = new Maid();
 		return instance;
