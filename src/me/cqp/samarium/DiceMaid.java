@@ -22,7 +22,7 @@ public class DiceMaid extends JcqAppAbstract implements ICQVer, IMsg, IRequest{
 		diceMaid.enable();
 		
 		//diceMaid.privateMsg(11, 0, 90L, "~help", 1);
-		diceMaid.groupMsg(0, 1, 1L, 0L, "", "~ra测试", 1);
+		diceMaid.groupMsg(0, 1, 1L, 0L, "", "～ra测试 80", 1);
 		diceMaid.exit();
 	}
 	
