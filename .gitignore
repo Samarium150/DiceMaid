@@ -1,0 +1,8 @@
+/.idea/*
+/.settings/*
+/bin/*
+/out/*
+/.classpath
+/.project
+/DiceMaid.eml
+/DiceMaid.iml
