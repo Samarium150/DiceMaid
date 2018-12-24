@@ -136,7 +136,7 @@ final class Dice{
 	}
 	
 	String check(String msg) {
-		Pattern cReason = Pattern.compile("^~ra");
+		Pattern cReason = Pattern.compile("^[~|～]ra.*");
 		Pattern cSkill = Pattern.compile("\\s+\\d+");
 		Matcher mcReason = cReason.matcher(msg);
 		Matcher mcSkill = cSkill.matcher(msg);
