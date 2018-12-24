@@ -8,8 +8,11 @@ import com.sobte.cqp.jcq.event.JcqAppAbstract;
 
 public class DiceMaid extends JcqAppAbstract implements ICQVer, IMsg, IRequest{
     
-    private static Maid maid = Maid.getInstance();
+    private static Maid maid;
     
+    DiceMaid(){
+    	maid = Maid.getInstance();
+    }
     /**
      * Use main function to debug
      * @param args System arguments
