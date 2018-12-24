@@ -8,8 +8,11 @@ import com.sobte.cqp.jcq.event.JcqAppAbstract;
 
 public class DiceMaid extends JcqAppAbstract implements ICQVer, IMsg, IRequest{
 	
-	private static Maid maid = Maid.getInstance();
+	private static Maid maid;
 	
+	DiceMaid(){
+		maid = Maid.getInstance();
+	}
 	/**
 	 * Use main function to debug
 	 * @param args System arguments
@@ -22,7 +25,7 @@ public class DiceMaid extends JcqAppAbstract implements ICQVer, IMsg, IRequest{
 		diceMaid.enable();
 		
 		//diceMaid.privateMsg(11, 0, 90L, "~help", 1);
-		diceMaid.groupMsg(0, 1, 1L, 0L, "", "～ra测试 80", 1);
+		diceMaid.groupMsg(0, 1, 1L, 0L, "", "~ra测试", 1);
 		diceMaid.exit();
 	}
 	
