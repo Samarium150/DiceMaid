@@ -65,7 +65,7 @@ final class Maid{
 		Pattern pCheck = Pattern.compile("^[~|～]ra.*");
 		Matcher mCheck = pCheck.matcher(msg);
 		if (mCheck.matches()) {
-			response = dice.check(msg);
+			response = dice.check(msg,0);
 			return;
 		}
 		
@@ -98,6 +98,13 @@ final class Maid{
 			response = madness.getIllness("0");
 		}else if (mMadB.matches()) {
 			response = madness.getIllness("1");
+			return;
+		}
+		
+		Pattern pReinforce = Pattern.compile("^[~|～]en.*");
+		Matcher mReinforce = pReinforce.matcher(msg);
+		if (mReinforce.matches()) {
+			response = dice.check(msg, 1);
 		}
 	}
 	
