@@ -1,9 +1,10 @@
-/.idea/*
-/.settings/*
+.idea/*
+.settings/*
 /bin/*
 /out/*
-/.classpath
-/.project
-/DiceMaid.eml
-/DiceMaid.iml
 *.class
+.classpath
+.project
+DiceMaid.eml
+DiceMaid.iml
+

@@ -136,7 +136,7 @@ final class Dice{
 	}
 	
 	String check(String msg, int type) {
-		Pattern cReason = Pattern.compile("^[~|～]ra");
+		Pattern cReason = Pattern.compile("^[~|～](ra|en)");
 		Pattern cSkill = Pattern.compile("\\s+\\d+");
 		Matcher mcReason = cReason.matcher(msg);
 		Matcher mcSkill = cSkill.matcher(msg);
@@ -159,14 +159,14 @@ final class Dice{
 		result.append(reason);
 		int dx = roll(1, 100);
 		if (type==0) {
-			result.append("检定: ").append("1d100=").append(dx).append("|").append(s).append(", ").append(checkResult(dx, s, type));
+			result.append("检定: 1d100=").append(dx).append("|").append(s).append(", ").append(checkResult(dx, s, type));
 		} else if (type==1) {
 			String success = checkResult(dx, s, type);
-			result.append("成长检定: ").append("1d100=").append(dx).append("|").append(s).append(", ").append(success).append("\n");
+			result.append("成长检定: 1d100=").append(dx).append("|").append(s).append(", ").append(success).append("\n");
 			int n = 0;
 			if (success.equals("成功")) {
 				n = roll(1, 10);
-				result.append("增长: ").append(n).append("\n");
+				result.append("增长: 1d10=").append(n).append("\n");
 			}
 			result.append("当前技能值为: ").append(s+n);
 		}
@@ -180,8 +180,8 @@ final class Dice{
 			if (result > 95 & result > skill) return "大失败";
 			if (result <= 5 & skill > result) return "大成功";
 			else if (skill < result & result <= 95) return "失败";
-			else if (half <= result & result <= skill) return  "普通成功";
-			else if (fifth <= result & result < half) return "困难成功";
+			else if (half < result & result <= skill) return  "普通成功";
+			else if (fifth < result & result <= half) return "困难成功";
 			else if (result <= fifth) return  "极难成功";
 		} else if (type==1) {
 			if (result>skill|result>=96) return "成功";
